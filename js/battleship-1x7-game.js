@@ -1,6 +1,8 @@
-const location1 = 1; // variabilele care tin locatioa barcii
-const location2 = 2; // variabilele care tin locatioa barcii
-const location3 = 3; // variabilele care tin locatioa barcii
+let randomLoc = Math.floor(Math.random() * 5);
+
+const location1 = randomLoc; // variabilele care tin locatioa barcii
+const location2 = location1 + 1; // variabilele care tin locatioa barcii
+const location3 = location2 + 1; // variabilele care tin locatioa barcii
 
 let guess; // variabila input guess
 
@@ -21,11 +23,16 @@ while (isSunk == false) {
     guesses += 1;
 
     if (guess == location1) {
+      alert("HIT!");
       hits += 1;
     } else if (guess == location2) {
       hits += 1;
+      alert("HIT!");
     } else if (guess == location3) {
       hits += 1;
+      alert("HIT!");
+    } else {
+      alert("MISS!");
     }
 
     if (hits == 3) {
