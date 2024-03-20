@@ -4,8 +4,19 @@ const scores = [
 ];
 
 let output;
+let highScore = 0;
+let numberOfTests;
 
-for (i = 0; i < scores.length; i += 1) {
-  output = "Bubble solution #" + (i + 1) + " score: " + scores[i];
+for (let i = 0; i < scores.length; i += 1) {
+  output = "Bubble solution #" + i + " score: " + scores[i];
   console.log(output);
+  numberOfTests = i;
+  if (scores[i] > highScore) {
+    highScore = scores[i];
+  }
 }
+
+for (let i = 0; i < highScore; i += 1) {}
+
+console.log("Bubbles tests: " + numberOfTests); // grsit
+console.log("Highest bubble score: " + highScore);
