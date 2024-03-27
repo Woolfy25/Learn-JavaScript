@@ -16,7 +16,14 @@ for (let i = 0; i < scores.length; i += 1) {
   }
 }
 
-for (let i = 0; i < highScore; i += 1) {}
-
-console.log("Bubbles tests: " + numberOfTests); // grsit
+console.log("Bubbles tests: " + scores.length);
 console.log("Highest bubble score: " + highScore);
+
+let bestSolutions = [];
+for (let i = 0; i < highScore; i += 1) {
+  if (scores[i] == highScore) {
+    bestSolutions.push(i);
+  }
+}
+
+console.log("Solutions with the highest score: " + bestSolutions);
