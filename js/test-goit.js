@@ -112,3 +112,18 @@ function getAllPropValues(propName) {
 }
 
 console.log(getAllPropValues("name"));
+
+//  EXERCISE 7
+
+// Funcție callback
+function greet(name) {
+  console.log(`Bine ai venit, ${name}.`);
+}
+
+// Funcție de tip HOF
+function registerGuest(name, callback) {
+  console.log(`Introducem datele vizitatorului în sistem: ${name}.`);
+  callback(name);
+}
+console.log(registerGuest("Andrei", greet));
+registerGuest("Andrei", greet);
